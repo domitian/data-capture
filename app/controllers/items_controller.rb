@@ -37,7 +37,8 @@ before_action :set_item, only: [:show, :edit,:update]
 	 end
 
 	 def item_type
-	 	@prop='#field-insert'
+	 	@prop=params[:type]
+	 	puts("@prop=    #{@prop.inspect}")
 	 	respond_to do |format|
 	 		format.js
 	 	end

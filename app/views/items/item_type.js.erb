@@ -1,3 +1,13 @@
 
-	$('<%= @prop %>').html("<input type='text' ><br>");
-	event.preventDefault();
+if ('<%= @prop %>' == '9'){
+$("<br><input type='text' class='radioother' placeholder='enter option'>").insertAfter('.btn-primary');
+
+}
+else {
+	$('.radioother').remove();
+	$('#field-insert1,#field-insert2,#field-insert3').hide();
+
+	$('#field-insert<%= @prop %>').show();
+	$('#field-insert<%= @prop %>').show();
+}
+
