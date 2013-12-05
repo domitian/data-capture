@@ -1,0 +1,5 @@
+<%= link_to 'New Event', new_item_path %>
+<% @item.each do |ls| %>
+	<p> <%= ls.question_title %>
+	</p>
+<% end %>
