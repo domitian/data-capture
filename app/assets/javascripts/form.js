@@ -1,17 +1,11 @@
 var fieldsize=0;
-$('#single-line').click(function(event){
-	$('#field-insert').html("<input type='text' ><br>");
-	event.preventDefault();
-} );
+
 
 $('#paragraph-text').click(function(event){
 	$('#field-insert').html("<textarea type='textarea' ></textarea><br>");
 	event.preventDefault();
 
 });
-$('.addradio').click(function(){
-	$(".addfield").html("<p>just checking again</p>")
-} );
 $('#radiobutton').click(function(event){
 	event.preventDefault();
 	fieldsize=0;
@@ -21,16 +15,17 @@ $('#radiobutton').click(function(event){
 } );
 
 jQuery(function() {
-	$("#check1").click(function(){
-		$.getScript("/item_type?user=1");
+	$("#single-line").click(function(event){
+		event.preventDefault();
+		$.getScript("/items/item_type?type=1");
 	});
 	$("#check2").click(function(){
-		$.getScript("/item_type?user=1");
+		$.getScript("/item/item_type?user=1");
 	});
 	$("#check3").click(function(){
-		$.getScript("/item_type?user=1");
+		$.getScript("/item/item_type?user=1");
 	});
 	$("#check4").click(function(){
-		$.getScript("/dashboard/ajax_handler?user=4");
+		$.getScript("/item/item_type?user=4");
 	});	
 });

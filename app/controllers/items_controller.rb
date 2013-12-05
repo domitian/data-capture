@@ -36,6 +36,13 @@ before_action :set_item, only: [:show, :edit,:update]
 	    end
 	 end
 
+	 def item_type
+	 	@prop='#field-insert'
+	 	respond_to do |format|
+	 		format.js
+	 	end
+	 end
+
 	private
 		def set_item
 	      @item = Item.find(params[:id])
