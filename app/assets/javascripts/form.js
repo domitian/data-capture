@@ -18,5 +18,6 @@ jQuery(function() {
 
 $('.btn-primary').click(function(event){
 	event.preventDefault();
-	$.getScript("/items/item_type?type=9");
+	var a=$('.radios').length;
+	$.getScript("/items/item_type?type=9&count="+a);
 });

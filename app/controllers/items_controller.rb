@@ -38,6 +38,8 @@ before_action :set_item, only: [:show, :edit,:update]
 
 	 def item_type
 	 	@prop=params[:type]
+
+	 	@num_options=params[:count]
 	 	puts("@prop=    #{@prop.inspect}")
 	 	respond_to do |format|
 	 		format.js
@@ -50,7 +52,7 @@ before_action :set_item, only: [:show, :edit,:update]
 	    end
 
 		def item_params
-			params.require(:item).permit(:question_title,:help_text,:question_type)	
+			params.require(:item).permit(:question_title,:help_text,:question_type=>[],answers_attributes: [:option])	
 		end		
 
 end

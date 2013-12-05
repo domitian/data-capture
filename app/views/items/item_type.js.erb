@@ -1,6 +1,6 @@
 
 if ('<%= @prop %>' == '9'){
-$("<br><input type='text' class='radioother' placeholder='enter option'>").insertAfter('.btn-primary');
+$("<br><input id='item_question_type' name='item[question_type][<%= @num_options %>]' class='radios' type='text' placeholder='enter option' />").insertAfter('.btn-primary');
 
 }
 else {

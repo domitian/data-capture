@@ -34,14 +34,25 @@
       <li><%= link_to "radio button ",items_path, :id => 'radiobutton' %></li>
     </ul>
   </div>
-  <div class='hiddenelements'>
-    <div id="field-insert1"><input type='text' ><br></div>
-    <div id="field-insert2"><textarea type='textarea' ></textarea><br></div>
-    <div id="field-insert3">
-      <input type='text' class='radios' placeholder='enter option'>
-      <button type="button" class="btn btn-primary">Add another</button> 
-    </div>
-  </div>
 
+    <div class='hiddenelements'>
+      <div id="field-insert1">
+        <input type='text' ><br>
+      </div>
+      <div id="field-insert2"><textarea type='textarea' ></textarea><br></div>
+
+      <div id="field-insert3">
+          <input id="item_question_type" name="item[question_type][0]" type="text" class='radios' placeholder="enter option" />
+
+        
+        <button type="button" class="btn btn-primary">Add another</button> 
+        
+      </div>
+
+    </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
 <%= javascript_include_tag 'form' %>
